@@ -1,0 +1,14 @@
+<!--pages/movie/movie.wxml-->
+<view class='movie'>
+    <view class='in_theater'>
+        <text class='title'>正在热映</text>
+        <view class='list' wx:for-items="{{movie_in_theaters}}" wx:key='{{index}}' data-id='{{item.id}}'>
+            <view class="img-box">
+                <image src="{{item.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
+            </view>
+            <view class='name'>
+                {{item.title}}
+            </view>
+        </view>
+    </view>
+</view>
