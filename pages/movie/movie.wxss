@@ -1,1 +1,13 @@
 /* pages/movie/movie.wxss */
+.list{
+    /* display: flex; */
+    display: block;
+}
+.list .list-item{
+    display: block;
+    width: 135rpx;
+
+}
+.list .list-item .image{
+    width: 100%;
+}
