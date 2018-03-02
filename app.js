@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    apikey:'0b2bdeda43b5688921839c8ecb20399b'
+    apikey:'0b2bdeda43b5688921839c8ecb20399b',
+    url:'https://api.douban.com'
   }
 })

@@ -1,4 +1,5 @@
 <!--pages/movie/movie.wxml-->
+<import src="../common/movie-item.wxml"/>
 <view class='movie'>
     <view class='in_theater movie-item'>
         <view class='title'>正在热映 
@@ -6,17 +7,8 @@
         </view>
         <view class='list-wrap'>
             <scroll-view class='list' scroll-x="true">
-                <view class='list-item' wx:for-items="{{in_theaters}}" wx:key='{{index}}' data-id='{{item.id}}'>
-                    <view class="img-box">
-                        <image src="{{item.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
-                    </view>
-                    <view class='name'>
-                        {{item.title}}
-                    </view>
-                    <view class='rating'>
-                        <text class="allstar{{item.rating.stars}}"></text>
-                        {{item.rating.average}}
-                    </view>
+                <view class="list-box" wx:for-items="{{in_theaters}}" wx:key='{{index}}'>
+                    <template wx:if="{{index < 7}}" is="movieItem" data="{{...item}}"/>
                 </view>
             </scroll-view>
         </view>
@@ -28,17 +20,8 @@
         </view>
         <view class='list-wrap'>
             <scroll-view class='list' scroll-x="true">
-                <view class='list-item' wx:for-items="{{weekly}}" wx:key='{{index}}' data-id='{{item.subject.id}}'>
-                    <view class="img-box">
-                        <image src="{{item.subject.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
-                    </view>
-                    <view class='name'>
-                        {{item.subject.title}}
-                    </view>
-                    <view class='rating'>
-                        <text class="allstar{{item.subject.rating.stars}}"></text>
-                        {{item.subject.rating.average}}
-                    </view>
+                <view class="list-box" wx:for-items="{{weekly}}" wx:key='{{index}}'>
+                    <template wx:if="{{index < 7}}" is="movieItem" data="{{...item.subject}}"/>
                 </view>
             </scroll-view>
         </view>
@@ -50,17 +33,8 @@
         </view>
         <view class='list-wrap'>
             <scroll-view class='list' scroll-x="true">
-                <view class='list-item' wx:for-items="{{new_movies}}" wx:key='{{index}}' data-id='{{item.id}}'>
-                    <view class="img-box">
-                        <image src="{{item.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
-                    </view>
-                    <view class='name'>
-                        {{item.title}}
-                    </view>
-                    <view class='rating'>
-                        <text class="allstar{{item.rating.stars}}"></text>
-                        {{item.rating.average}}
-                    </view>
+                <view class="list-box" wx:for-items="{{new_movies}}" wx:key='{{index}}'>
+                    <template wx:if="{{index < 7}}" is="movieItem" data="{{...item}}"/>
                 </view>
             </scroll-view>
         </view>

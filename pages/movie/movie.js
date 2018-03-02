@@ -19,7 +19,7 @@ Page({
     onLoad: function (options) {
         let _this = this;
         wx.request({
-            url: 'https://api.douban.com/v2/movie/in_theaters',
+            url: app.globalData.url+'/v2/movie/in_theaters',
             data:{
                 apikey: app.globalData.apikey
             },
@@ -36,7 +36,7 @@ Page({
         })
 
         wx.request({
-            url: 'https://api.douban.com/v2/movie/weekly',
+            url: app.globalData.url+'/v2/movie/weekly',
             data: {
                 apikey: app.globalData.apikey
             },
@@ -53,7 +53,7 @@ Page({
         })
 
         wx.request({
-            url: 'https://api.douban.com/v2/movie/new_movies',
+            url: app.globalData.url+'/v2/movie/new_movies',
             data: {
                 apikey: app.globalData.apikey
             },

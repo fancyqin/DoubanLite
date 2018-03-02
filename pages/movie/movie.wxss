@@ -33,6 +33,9 @@ page{
     height: 400rpx;
     padding-left: 20rpx;
 }
+.list-box{
+    display: inline-block;
+}
 .list .list-item{
     display: inline-block;
     margin-right: 20rpx;
