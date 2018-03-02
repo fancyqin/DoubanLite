@@ -1,16 +1,70 @@
 <!--pages/movie/movie.wxml-->
 <view class='movie'>
-    <view class='in_theater'>
-        <text class='title'>正在热映</text>
-        <view class="list">
-            <view class='list-item' wx:for-items="{{movie_in_theaters}}" wx:key='{{index}}' data-id='{{item.id}}'>
-                <view class="img-box">
-                    <image src="{{item.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
+    <view class='in_theater movie-item'>
+        <view class='title'>正在热映 
+            <navigator class="more">更多 ></navigator>
+        </view>
+        <view class='list-wrap'>
+            <scroll-view class='list' scroll-x="true">
+                <view class='list-item' wx:for-items="{{in_theaters}}" wx:key='{{index}}' data-id='{{item.id}}'>
+                    <view class="img-box">
+                        <image src="{{item.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
+                    </view>
+                    <view class='name'>
+                        {{item.title}}
+                    </view>
+                    <view class='rating'>
+                        <text class="allstar{{item.rating.stars}}"></text>
+                        {{item.rating.average}}
+                    </view>
                 </view>
-                <view class='name'>
-                    {{item.title}}
-                </view>
-            </view>
+            </scroll-view>
         </view>
     </view>
+
+    <view class='in_theater movie-item'>
+        <view class='title'>本周口碑榜 
+            <navigator class="more">更多 ></navigator>
+        </view>
+        <view class='list-wrap'>
+            <scroll-view class='list' scroll-x="true">
+                <view class='list-item' wx:for-items="{{weekly}}" wx:key='{{index}}' data-id='{{item.subject.id}}'>
+                    <view class="img-box">
+                        <image src="{{item.subject.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
+                    </view>
+                    <view class='name'>
+                        {{item.subject.title}}
+                    </view>
+                    <view class='rating'>
+                        <text class="allstar{{item.subject.rating.stars}}"></text>
+                        {{item.subject.rating.average}}
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view class='in_theater movie-item'>
+        <view class='title'>新片榜 
+            <navigator class="more">更多 ></navigator>
+        </view>
+        <view class='list-wrap'>
+            <scroll-view class='list' scroll-x="true">
+                <view class='list-item' wx:for-items="{{new_movies}}" wx:key='{{index}}' data-id='{{item.id}}'>
+                    <view class="img-box">
+                        <image src="{{item.images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
+                    </view>
+                    <view class='name'>
+                        {{item.title}}
+                    </view>
+                    <view class='rating'>
+                        <text class="allstar{{item.rating.stars}}"></text>
+                        {{item.rating.average}}
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+
 </view>
