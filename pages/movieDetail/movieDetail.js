@@ -16,7 +16,7 @@ Page({
     onLoad: function (options) {
         let _this = this;
         wx.request({
-            url: app.globalData.url + '/v2/movie/subject/'+ Number(options.id),
+            url: app.globalData.url + '/v2/movie/subject/' + Number(options.id.replace(/["]/g, '')),
             data: {
                 apikey: app.globalData.apikey,
             },
@@ -25,7 +25,8 @@ Page({
             },
             dataType: 'json',
             success: function (res) {
-                _this.setData({...res.data})
+                _this.setData({ ...res.data });
+                wx.setNavigationBarTitle({ title: res.data.title });
             }
         })
     },

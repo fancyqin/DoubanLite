@@ -1,2 +1,8 @@
 <!--pages/movieDetail/movieDetail.wxml-->
-<text>pages/movieDetail/movieDetail.wxml</text>
+<view class="movie-detail">
+
+
+
+
+</view>
+<text>{{title}}</text>
