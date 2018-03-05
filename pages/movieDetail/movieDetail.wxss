@@ -1,1 +1,144 @@
 /* pages/movieDetail/movieDetail.wxss */
+.movie-title{
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    height: 300rpx;
+}
+
+.movie-title .image-bg{
+    position: absolute;
+    width: 100%;
+    height: 300rpx;
+    z-index: -1;
+}
+.movie-title .image{
+    position: absolute;
+    width: 200rpx;
+    height: 280rpx;
+    left: 40rpx;
+    bottom: -40rpx;
+    z-index:1;
+}
+
+.movie-title .title-box{
+   position: absolute;
+   left: 280rpx;
+   top: 100rpx; 
+}
+
+.movie-title .title-box .title{
+    font-size: 36rpx;
+    color: #fff;
+    margin-bottom: 10rpx;
+}
+.movie-title .title-box .rank{
+    font-size: 64rpx;
+    font-weight: bold;
+    display: inline-block;
+    color:#fff;
+    margin-right: 20rpx;
+}
+.movie-title .title-box .score{
+    display: inline-block;
+}
+.movie-title .title-box .star{
+    display: block;
+}
+.movie-title .title-box .collect_count{
+    display: block;
+    color: #999;
+    font-size: 24rpx;
+}
+
+
+.movie-inner{
+    padding: 60rpx 40rpx;
+    
+}
+.p{
+    font-size: 24rpx;
+    color: #333;
+    line-height: 2;
+}
+
+.movie-inner .wish{
+    color: #999;
+    font-size: 24rpx;
+    padding-top: 10rpx;
+}
+
+.movie-inner .summary{
+    padding: 40rpx 0;
+}
+
+.movie-inner .l-title{
+    color: #999;
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+}
+.movie-inner .summary-inner{
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+    line-height: 1.7;
+}
+.comments-item{
+    margin-bottom: 20rpx;
+    
+}
+.comments-item .avatar{
+    float: left;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.comments-item .name{
+    font-size: 24rpx;
+    margin-left: 80rpx;
+}
+.comments-item .time{
+    color: #999;
+    font-size: 24rpx;
+    margin-left: 80rpx;
+}
+.comments-item .inner{
+    padding: 10rpx 0;
+    font-size: 24rpx;
+    line-height: 1.7;
+    color: #555;
+    margin-left: 80rpx;
+}
+.comments-item .star{
+    display: block;
+    margin-left: 80rpx;
+}
+
+.casts-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+.casts{
+    /* display: flex; */
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    height: 270rpx;
+    margin-bottom: 40rpx;
+}
+.casts-box{
+    display: inline-block;
+    margin-right: 20rpx;
+    vertical-align: top;
+    width: 150rpx;
+}
+.casts-box image{
+    width: 150rpx;
+    height: 210rpx;
+    margin-bottom: 10rpx;
+}
+.casts-box .name{
+    font-size: 24rpx;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

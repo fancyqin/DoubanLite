@@ -1,8 +1,86 @@
 <!--pages/movieDetail/movieDetail.wxml-->
 <view class="movie-detail">
 
+    <view class="movie-title">
+        <image src="{{images.large}}" class="image-bg" mode="aspectFill" lazy-load="true"/>
+        <image src="{{images.large}}" class="image" mode="aspectFill" lazy-load="true"/>
+
+        <view class="title-box">
+            <view class="title">{{title}}</view>
+            <view class="">
+                <view class="rank">{{rating.average}}</view>
+                <view class="score">
+                    <text class="star allstar{{rating.stars}}"></text>
+                    <text class="collect_count">{{ratings_count}}人评价</text>
+                </view>
+            </view>
+        </view>
+
+
+    </view>
+    
+    <view class="movie-inner">
+        <view class='p'>
+            {{durations}} 
+            <block wx:for-items="{{genres}}" wx:key='{{index}}'>
+                <block wx:if="{{index < genres.length}}"> / </block> {{item}}
+            </block>
+        </view>
+        <view class='p'>
+            <block wx:for-items="{{pubdates}}" wx:key='{{index}}'>
+                 {{item}} /
+            </block>
+            <block wx:for-items="{{countries}}" wx:key='{{index}}'>
+                  {{item}} /
+            </block>
+        </view>
+        <view class='p'>
+            <block wx:for-items="{{directors}}"  wx:key='{{index}}'>
+                {{item.name}}(导演) / 
+            </block>
+            <block wx:for-items="{{casts}}"  wx:key='{{index}}'>
+                {{item.name}} / 
+            </block>
+        </view>
+
+
+        <view class="wish">
+            {{wish_count}}人想看，{{collect_count}}人看过
+        </view>
+
+        <view class="summary">
+            <view class="l-title">{{title}}的剧情简介</view>
+            <view class="summary-inner">{{summary}}</view>
+        </view>
+
+        <view class='casts-wrap'>
+            <view class="l-title">{{title}}的主要影人</view>
+            <scroll-view class='casts' scroll-x="true">
+                <view class="casts-box" wx:for-items="{{directors}}" wx:key='{{index}}'>
+                    <image src='{{item.avatars.large}}' mode="aspectFill" lazy-load="true" />
+                    <view class="name">{{item.name}}(导演)</view>
+                </view>
+                <view class="casts-box" wx:for-items="{{casts}}" wx:key='{{index}}'>
+                    <image src='{{item.avatars.large}}' mode="aspectFill" lazy-load="true" />
+                    <view class="name">{{item.name}}</view>
+                </view>
+            </scroll-view>
+        </view>
+
+        <view class="comments">
+            <view class="l-title">短评 （{{comments_count}}）</view>
+            <view class="comments-item" wx:for-items="{{popular_comments}}" wx:key='{{index}}' >
+                <image class="avatar" src="{{item.author.avatar}}" mode="aspectFill" />
+                <view class="name">{{item.author.name}}</view>
+                <view class="time">{{item.created_at}}</view>
+                <view class="star allstar{{item.rating.value+'0'}}"></view>
+                <view class="inner">{{item.content}}</view>
+            </view>
+        </view>
+
+    </view>
 
 
 
 </view>
-<text>{{title}}</text>
+
