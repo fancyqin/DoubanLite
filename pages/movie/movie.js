@@ -31,7 +31,10 @@ Page({
                 _this.setData({
                     in_theaters: res.data.subjects
                 })
-                
+                wx.setStorage({
+                    key:'in_theaters',
+                    data: res.data.subjects
+                });
             }
         })
 
@@ -48,7 +51,10 @@ Page({
                 _this.setData({
                     weekly: res.data.subjects
                 })
-
+                wx.setStorage({
+                    key: 'weekly',
+                    data: res.data.subjects
+                });
             }
         })
 
@@ -65,7 +71,10 @@ Page({
                 _this.setData({
                     new_movies: res.data.subjects
                 })
-
+                wx.setStorage({
+                    key: 'new_movies',
+                    data: res.data.subjects
+                });
             }
         })
 

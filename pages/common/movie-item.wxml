@@ -1,11 +1,9 @@
 <template name="movieItem">
-    <navigator url='../movieDetail/movieDetail?id="{{id}}"' class='list-item' data-id='{{id}}'>
+    <navigator url='../movieDetail/movieDetail?id={{id}}' class='list-item' data-id='{{id}}'>
         <view class="img-box">
             <image src="{{images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
         </view>
-        <view class='name'>
-            {{title}}
-        </view>
+        <view class='name'>{{title}}</view>
         <view class='rating'>
             <text class="allstar{{rating.stars}}"></text>
             {{rating.average}}

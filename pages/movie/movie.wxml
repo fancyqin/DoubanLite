@@ -3,7 +3,7 @@
 <view class='movie'>
     <view class='in_theater movie-item'>
         <view class='title'>正在热映 
-            <navigator class="more">更多 ></navigator>
+            <navigator url='../movieList/movieList?key=in_theaters' class="more">更多 ></navigator>
         </view>
         <view class='list-wrap'>
             <scroll-view class='list' scroll-x="true">
@@ -16,7 +16,7 @@
 
     <view class='in_theater movie-item'>
         <view class='title'>本周口碑榜 
-            <navigator class="more">更多 ></navigator>
+            <navigator url='../movieList/movieList?key=weekly' class="more">更多 ></navigator>
         </view>
         <view class='list-wrap'>
             <scroll-view class='list' scroll-x="true">
@@ -29,7 +29,7 @@
 
     <view class='in_theater movie-item'>
         <view class='title'>新片榜 
-            <navigator class="more">更多 ></navigator>
+            <navigator url='../movieList/movieList?key=new_movies' class="more">更多 ></navigator>
         </view>
         <view class='list-wrap'>
             <scroll-view class='list' scroll-x="true">

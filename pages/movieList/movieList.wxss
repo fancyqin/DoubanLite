@@ -1,0 +1,37 @@
+/* pages/movieList/movieList.wxss */
+
+.list-wrap{
+    width: 100%;
+    padding: 40rpx 0;
+}
+.list{
+    display: block;
+    width: 100%;
+    padding: 20rpx 0 20rpx 20rpx;
+}
+.list-box{
+    display: inline-block;
+}
+.list .list-item{
+    display: inline-block;
+    vertical-align: top;
+    width: 200rpx;
+    margin:20rpx;
+}
+.list .list-item .image{
+    width: 200rpx;
+    height: 280rpx;
+    vertical-align: top;
+    margin-bottom: 20rpx;
+}
+.list .list-item .name{
+    font-size: 28rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rating{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    color: #888;
+}

@@ -1,24 +1,44 @@
-<!--index.wxml-->
-<view class="container">
-    <!-- <view class="userinfo">
-        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <block wx:else>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        </block>
-
-    </view> -->
-    <view class='nav-bar'>
-        <navigator url='../movie/movie'>
-            <text class='nav-text'>电影</text>
-        </navigator>
+<!--pages/movie/movie.wxml-->
+<import src="../common/movie-item.wxml"/>
+<view class='movie'>
+    <view class='in_theater movie-item'>
+        <view class='title'>正在热映 
+            <navigator url='../movieList/movieList?key=in_theaters' class="more">更多 ></navigator>
+        </view>
+        <view class='list-wrap loading-{{in_theaters_loading}}'>
+            <scroll-view class='list' scroll-x="true">
+                <view class="list-box" wx:for-items="{{in_theaters}}" wx:key='{{index}}'>
+                    <template wx:if="{{index < 7}}" is="movieItem" data="{{...item}}"/>
+                </view>
+            </scroll-view>
+        </view>
     </view>
 
-    <view class='movie-box'>
-        
+    <view class='in_theater movie-item'>
+        <view class='title'>本周口碑榜 
+            <navigator url='../movieList/movieList?key=weekly' class="more">更多 ></navigator>
+        </view>
+        <view class='list-wrap loading-{{weekly_loading}}'>
+            <scroll-view class='list' scroll-x="true">
+                <view class="list-box" wx:for-items="{{weekly}}" wx:key='{{index}}'>
+                    <template wx:if="{{index < 7}}" is="movieItem" data="{{...item.subject}}"/>
+                </view>
+            </scroll-view>
+        </view>
     </view>
 
-    <!-- <view class="usermotto">
-        <text class="user-motto">{{motto}}</text>
-    </view> -->
+    <view class='in_theater movie-item'>
+        <view class='title'>新片榜 
+            <navigator url='../movieList/movieList?key=new_movies' class="more">更多 ></navigator>
+        </view>
+        <view class='list-wrap loading-{{new_movies_loading}}'>
+            <scroll-view class='list' scroll-x="true">
+                <view class="list-box" wx:for-items="{{new_movies}}" wx:key='{{index}}'>
+                    <template wx:if="{{index < 7}}" is="movieItem" data="{{...item}}"/>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+
 </view>

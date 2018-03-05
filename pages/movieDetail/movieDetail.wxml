@@ -20,23 +20,20 @@
     </view>
     
     <view class="movie-inner">
-        <view class='p'>
-            {{durations}} 
+        <view class='p'>{{durations}} 
             <block wx:for-items="{{genres}}" wx:key='{{index}}'>
                 <block wx:if="{{index < genres.length}}"> / </block> {{item}}
             </block>
         </view>
         <view class='p'>
-            <block wx:for-items="{{pubdates}}" wx:key='{{index}}'>
-                 {{item}} /
+            <block wx:for-items="{{pubdates}}" wx:key='{{index}}'>{{item}} /
             </block>
             <block wx:for-items="{{countries}}" wx:key='{{index}}'>
                   {{item}} /
             </block>
         </view>
         <view class='p'>
-            <block wx:for-items="{{directors}}"  wx:key='{{index}}'>
-                {{item.name}}(导演) / 
+            <block wx:for-items="{{directors}}"  wx:key='{{index}}'>{{item.name}}(导演) / 
             </block>
             <block wx:for-items="{{casts}}"  wx:key='{{index}}'>
                 {{item.name}} / 
@@ -44,9 +41,7 @@
         </view>
 
 
-        <view class="wish">
-            {{wish_count}}人想看，{{collect_count}}人看过
-        </view>
+        <view class="wish">{{wish_count}}人想看，{{collect_count}}人看过</view>
 
         <view class="summary">
             <view class="l-title">{{title}}的剧情简介</view>
