@@ -20,6 +20,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.getRequestData();
+    },
+
+    getRequestData:function(){
+
+        
         let _this = this;
         wx.request({
             url: app.globalData.url + '/v2/movie/in_theaters',
@@ -31,10 +37,10 @@ Page({
             },
             dataType: 'json',
             success: function (res) {
-                
+
                 _this.setData({
                     in_theaters: res.data.subjects,
-                    in_theaters_loading:false
+                    in_theaters_loading: false
                 })
                 wx.setStorage({
                     key: 'in_theaters',
@@ -85,6 +91,7 @@ Page({
             }
         })
 
+
     },
 
     /**
@@ -119,7 +126,21 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-
+        wx.showNavigationBarLoading();
+        this.setData({
+            in_theaters: [],
+            in_theaters_loading: true,
+            weekly: [],
+            weekly_loading: true,
+            new_movies: [],
+            new_movies_loading: true
+        });
+        this.getRequestData();
+        setTimeout(function(){
+            wx.hideNavigationBarLoading();
+            wx.stopPullDownRefresh();
+        },1000);
+        
     },
 
     /**
