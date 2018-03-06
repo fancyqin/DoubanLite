@@ -1,9 +1,9 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/movie/movie",
         "pages/movieDetail/movieDetail",
-        "pages/movieList/movieList"
+        "pages/movieList/movieList",
+        "pages/castDetail/castDetail"
     ],
     "window": {
         "backgroundTextStyle": "light",
