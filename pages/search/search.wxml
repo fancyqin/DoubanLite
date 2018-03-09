@@ -1,0 +1,29 @@
+<!--pages/search/search.wxml-->
+<import src="../common/movie-item.wxml"/>
+<view class='search'>
+    <input class='input' bindinput="searchMovie" focus='true' ></input>
+    <icon class='icon' type='search' size='16'></icon>
+</view>
+
+
+<view class='search-list loading-{{searchLoading}}'>
+
+
+
+    <block wx:if="{{searchData.length > 0}}">
+
+        <view class="list-box" wx:for-items="{{searchData}}" wx:key='{{index}}'>
+
+            <template is="movieItem" data="{{...item}}"/>
+
+        </view>
+
+    </block>
+
+
+    <view wx:else class='no-result'>
+         木有鱼丸
+    </view>
+
+
+</view>

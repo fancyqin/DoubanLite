@@ -1,5 +1,16 @@
 <!--pages/movie/movie.wxml-->
 <import src="../common/movie-item.wxml"/>
+
+<view class='search'>
+    <navigator url='../search/search'>
+        <view class='input'></view>
+        <view class='search-show'>
+            <icon class='icon' type='search' size='16' color='#999'></icon>
+            <text class='text'>搜索</text>
+        </view>
+        
+    </navigator>
+</view>
 <view class='movie'>
     <view class='in_theater movie-item'>
         <view class='title'>正在热映 

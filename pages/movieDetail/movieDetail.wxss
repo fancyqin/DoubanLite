@@ -29,7 +29,11 @@
 .movie-title .title-box .title{
     font-size: 36rpx;
     color: #fff;
-    margin-bottom: 10rpx;
+}
+
+.movie-title .title-box .en_title{
+    font-size: 28rpx;
+    color: #fff;
 }
 .movie-title .title-box .rank{
     font-size: 64rpx;

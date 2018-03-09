@@ -9,7 +9,7 @@ page{
 }
 
 .title{
-    border-left: 5px solid #67bb62;
+    border-left: 5px solid #7C6146;
     margin-bottom: 30rpx;
     font-size: 28rpx;
     padding: 0 15rpx 0 10rpx;
@@ -18,7 +18,7 @@ page{
 .title .more{
     float: right;
     font-weight: normal;
-    color: #1aad19;
+    color: #7C6146;
     font-size: 24rpx;
 }
 .list-wrap{
@@ -59,6 +59,45 @@ page{
     color: #888;
 }
 
-
-
-
+.search{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20rpx;
+    background: #7C6146;
+}
+.search .input{
+    box-sizing: border-box;
+    height: 28px;
+    background: #fff;
+    padding: 5rpx;
+    border-radius: 8rpx;
+}
+.search .search-show{
+    position: absolute;
+    top: 20rpx;
+    z-index: 1;
+    width: 200rpx;
+    left: 50%;
+    height: 28px;
+    line-height: 28px;
+    margin-left: -100rpx;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search .search-show .icon{
+    margin-right: 10rpx;
+    height: 28px;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search .search-show .text{
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #999;
+}

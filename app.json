@@ -3,11 +3,12 @@
         "pages/index/index",
         "pages/movieDetail/movieDetail",
         "pages/movieList/movieList",
-        "pages/castDetail/castDetail"
+        "pages/castDetail/castDetail",
+        "pages/search/search"
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#67bb62",
+        "navigationBarBackgroundColor": "#7C6146",
         "navigationBarTitleText": "豆瓣Lite",
         "navigationBarTextStyle": "white"
     }
