@@ -21,9 +21,8 @@
 }
 
 .movie-title .title-box{
-   position: absolute;
-   left: 280rpx;
-   top: 100rpx; 
+   margin-left: 280rpx;
+   padding-top: 100rpx;
 }
 
 .movie-title .title-box .title{
@@ -145,4 +144,7 @@
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.loading-true{
+    text-indent: -9999em;
 }

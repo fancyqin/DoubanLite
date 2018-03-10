@@ -1,1 +1,138 @@
 /* pages/castDetail/castDetail.wxss */
+
+.cast-title{
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    height: 300rpx;
+}
+
+.cast-title .image-bg{
+    position: absolute;
+    width: 100%;
+    height: 300rpx;
+    z-index: -1;
+}
+.cast-title .image{
+    position: absolute;
+    width: 200rpx;
+    height: 280rpx;
+    left: 40rpx;
+    bottom: -40rpx;
+    z-index:1;
+}
+
+.cast-title .title-box{
+   position: absolute;
+   left: 280rpx;
+   top: 100rpx; 
+}
+
+.cast-title .title-box .title{
+    font-size: 36rpx;
+    color: #fff;
+}
+
+.cast-title .title-box .en_title{
+    font-size: 28rpx;
+    color: #fff;
+}
+.cast-title .title-box .professions{
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color:#999;
+}
+
+
+.cast-inner{
+    min-height: 40vh;
+    padding: 60rpx 40rpx;
+    
+}
+.p{
+    font-size: 24rpx;
+    color: #333;
+    line-height: 2;
+}
+
+
+.cast-inner .summary{
+    padding: 40rpx 0;
+}
+
+.cast-inner .l-title{
+    color: #999;
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+}
+.cast-inner .summary-inner{
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+    line-height: 1.7;
+}
+
+.photos-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+.photos{
+    /* display: flex; */
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    height: 220rpx;
+    margin-bottom: 40rpx;
+}
+.photo-box{
+    display: inline-block;
+    margin-right: 10rpx;
+    vertical-align: top;
+    width: 220rpx;
+    background: #f3f5f7;
+}
+.photo-box image{
+    width: 220rpx;
+    height: 220rpx;
+    margin-bottom: 10rpx;
+}
+.loading-true{
+    text-indent: -9999em;
+}
+
+
+
+.list-wrap{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40rpx;
+}
+.works-list{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    height: 300rpx;
+}
+.list-box{
+    display: inline-block;
+}
+.works-list .list-item{
+    display: inline-block;
+    margin-right: 20rpx;
+    vertical-align: top;
+    width: 150rpx;
+}
+.works-list .list-item .image{
+    width:150rpx;
+    height:210rpx;
+    vertical-align: top;
+    margin-bottom: 10rpx;
+}
+.works-list .list-item .name{
+    font-size: 24rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rating{
+    font-size: 22rpx;
+    margin-top: 8rpx;
+    color: #888;
+}

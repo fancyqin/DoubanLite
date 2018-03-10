@@ -1,13 +1,13 @@
 <!--pages/movieDetail/movieDetail.wxml-->
-<view class="movie-detail">
+<view class="movie-detail loading-{{detailLoading}}">
 
     <view class="movie-title">
         <image src="{{images.large}}" class="image-bg" mode="aspectFill" lazy-load="true"/>
         <image src="{{images.large}}" class="image" mode="aspectFill" lazy-load="true"/>
 
         <view class="title-box">
-            <view class="title">{{title}}</view>
-            <view wx:if="{{title !== original_title}}" class='en_title'>{{original_title}}</view>
+            <view class="title ellipsis">{{title}}</view>
+            <view wx:if="{{title !== original_title}}" class='en_title ellipsis'>{{original_title}}</view>
             <view class="">
                 <view class="rank">{{rating.average}}</view>
                 <view class="score">
@@ -53,12 +53,16 @@
             <view class="l-title">{{title}}的主要影人</view>
             <scroll-view class='casts' scroll-x="true">
                 <view class="casts-box" wx:for-items="{{directors}}" wx:key='{{index}}'>
-                    <image src='{{item.avatars.large}}' mode="aspectFill" lazy-load="true" />
-                    <view class="name">{{item.name}}(导演)</view>
+                    <navigator url='../castDetail/castDetail?id={{item.id}}'>
+                        <image src='{{item.avatars.large}}' mode="aspectFill" lazy-load="true" />
+                        <view class="name">{{item.name}}(导演)</view>
+                    </navigator>
                 </view>
                 <view class="casts-box" wx:for-items="{{casts}}" wx:key='{{index}}'>
-                    <image src='{{item.avatars.large}}' mode="aspectFill" lazy-load="true" />
-                    <view class="name">{{item.name}}</view>
+                    <navigator url='../castDetail/castDetail?id={{item.id}}'>
+                        <image src='{{item.avatars.large}}' mode="aspectFill" lazy-load="true" />
+                        <view class="name">{{item.name}}</view>
+                    </navigator>
                 </view>
             </scroll-view>
         </view>

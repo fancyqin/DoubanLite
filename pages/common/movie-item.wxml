@@ -3,10 +3,34 @@
         <view class="img-box">
             <image src="{{images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
         </view>
-        <view class='name'>{{title}}</view>
+        <view class='name ellipsis'>{{title}}</view>
         <view class='rating'>
-            <text class="allstar{{rating.stars}}"></text>
-            {{rating.average}}
+            <block wx:if="{{rating.average === 0}}">
+                暂无评分
+            </block>
+            <block wx:else>
+                <text class="allstar{{rating.stars}}"></text>
+                {{rating.average}}
+            </block>
+        </view>
+    </navigator>
+</template>
+
+<template name="movieSearchItem">
+    <navigator url='../movieDetail/movieDetail?id={{id}}' class='list-item' data-id='{{id}}'>
+        <view class="img-box">
+            <image src="{{images.small}}" class="image" mode="aspectFill" lazy-load="true"/>
+        </view>
+        <view class='name'>{{title}}</view>
+        <view wx:if="{{title !== original_title}}" class='en_title'>{{original_title}}</view>
+        <view class='rating'>
+            <block wx:if="{{rating.average === 0}}">
+                暂无评分
+            </block>
+            <block wx:else>
+                <text class="allstar{{rating.stars}}"></text>
+                {{rating.average}}
+            </block>
         </view>
     </navigator>
 </template>

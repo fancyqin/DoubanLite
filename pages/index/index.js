@@ -37,15 +37,16 @@ Page({
             },
             dataType: 'json',
             success: function (res) {
-
-                _this.setData({
-                    in_theaters: res.data.subjects,
-                    in_theaters_loading: false
+                app.ajaxFunc(res,() =>{
+                    _this.setData({
+                        in_theaters: res.data.subjects,
+                        in_theaters_loading: false
+                    })
+                    wx.setStorage({
+                        key: 'in_theaters',
+                        data: res.data.subjects
+                    });
                 })
-                wx.setStorage({
-                    key: 'in_theaters',
-                    data: res.data.subjects
-                });
             }
         })
 
@@ -59,14 +60,17 @@ Page({
             },
             dataType: 'json',
             success: function (res) {
-                _this.setData({
-                    weekly: res.data.subjects,
-                    weekly_loading: false
+                app.ajaxFunc(res, () => {
+                    _this.setData({
+                        weekly: res.data.subjects,
+                        weekly_loading: false
+                    })
+                    wx.setStorage({
+                        key: 'weekly',
+                        data: res.data.subjects
+                    });
                 })
-                wx.setStorage({
-                    key: 'weekly',
-                    data: res.data.subjects
-                });
+                
             }
         })
 
@@ -80,14 +84,16 @@ Page({
             },
             dataType: 'json',
             success: function (res) {
-                _this.setData({
-                    new_movies: res.data.subjects,
-                    new_movies_loading: false
+                app.ajaxFunc(res, () => {
+                    _this.setData({
+                        new_movies: res.data.subjects,
+                        new_movies_loading: false
+                    })
+                    wx.setStorage({
+                        key: 'new_movies',
+                        data: res.data.subjects
+                    });
                 })
-                wx.setStorage({
-                    key: 'new_movies',
-                    data: res.data.subjects
-                });
             }
         })
 

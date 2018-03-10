@@ -7,7 +7,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        detailLoading: true
     },
 
     /**
@@ -25,8 +25,12 @@ Page({
             },
             dataType: 'json',
             success: function (res) {
-                _this.setData({ ...res.data });
-                wx.setNavigationBarTitle({ title: res.data.title });
+                app.ajaxFunc(res,() => {
+                    res.data.detailLoading = false;
+                    _this.setData({ ...res.data });
+                    wx.setNavigationBarTitle({ title: res.data.title });
+                });
+                
             }
         })
     },

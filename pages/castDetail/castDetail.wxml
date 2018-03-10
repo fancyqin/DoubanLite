@@ -1,2 +1,60 @@
 <!--pages/castDetail/castDetail.wxml-->
-<text>pages/castDetail/castDetail.wxml</text>
+<import src="../common/movie-item.wxml"/>
+<view class="movie-detail loading-{{detailLoading}}">
+
+    <view class="cast-title">
+        <image src="{{photos[0].image}}" class="image-bg" mode="aspectFill" lazy-load="true"/>
+        <image src="{{avatars.large}}" class="image" mode="aspectFill" lazy-load="true"/>
+
+        <view class="title-box">
+            <view class="title ellipsis">{{name}}</view>
+            <view wx:if="{{name_en}}" class='en_title ellipsis'>{{name_en}}</view>
+            <view class="">
+                <view class="professions">
+                    <block wx:for-items="{{professions}}" wx:key="{{index}}">
+                        {{item}} 
+                    </block>
+                </view>
+            </view>
+        </view>
+
+
+    </view>
+    
+    <view class="cast-inner">
+        <view class='p'>
+        {{born_place}} / {{birthday}} / {{constellation}}
+        </view>
+
+        <view class="summary">
+            <view class="l-title">简介</view>
+            <view class="summary-inner">{{summary}}</view>
+        </view>
+
+        <view class='works'>
+            <view class='l-title'>影视</view>
+            <view class="list-wrap">
+                <scroll-view class='works-list' scroll-x="true">
+                    <view class="list-box" wx:for-items="{{works}}" wx:key='{{index}}'>
+                        <template is="movieItem" data="{{...item.subject}}"/>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+
+        <view class='photos-wrap' wx:if="{{photos.length >0}}">
+            <view class="l-title">相册</view>
+            <scroll-view class='photos' scroll-x="true">
+                <view class="photo-box" wx:for-items="{{photos}}" wx:key='{{index}}'>
+                    <image src='{{item.image}}' mode="aspectFit" lazy-load="true" />
+                </view>
+            </scroll-view>
+        </view>
+
+    </view>
+
+
+
+</view>
+
+

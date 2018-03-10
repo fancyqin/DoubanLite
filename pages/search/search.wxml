@@ -14,7 +14,7 @@
 
         <view class="list-box" wx:for-items="{{searchData}}" wx:key='{{index}}'>
 
-            <template is="movieItem" data="{{...item}}"/>
+            <template is="movieSearchItem" data="{{...item}}"/>
 
         </view>
 
