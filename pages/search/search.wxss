@@ -47,11 +47,16 @@ page{
     height: 140rpx;
 }
 .list-box .name{
-    margin-top: 20rpx;
+    margin-top: 10rpx;
     font-size: 26rpx;
     color: #555;
     margin-left: 140rpx;
     padding: 10rpx 0;
+}
+.list-box .en_title{
+    font-size: 24rpx;
+    color: #999;
+    margin-left: 140rpx;
 }
 .list-box .rating{
     font-size: 26rpx;
