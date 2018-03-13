@@ -56,7 +56,7 @@
 
 
 .cast-inner .summary{
-    padding: 40rpx 0;
+    padding: 40rpx 0 0;
 }
 
 .cast-inner .l-title{
@@ -99,7 +99,9 @@
 }
 
 
-
+.works{
+    padding-top: 40rpx;
+}
 .list-wrap{
     width: 100%;
     overflow: hidden;

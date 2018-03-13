@@ -34,7 +34,7 @@ Page({
             }
         })
     },
-
+    
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -81,6 +81,21 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
-
+        
+        return {
+            title: this.data.title,
+            success:function(res){
+                wx.showToast({
+                    title: '分享成功！',
+                    icon: 'success'
+                })
+            },
+            fail:function(res){
+                wx.showToast({
+                    title: 'Oops, 转发失败',
+                    icon: 'none'
+                })
+            }
+        }
     }
 })

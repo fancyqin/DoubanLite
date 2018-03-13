@@ -23,10 +23,12 @@
     
     <view class="cast-inner">
         <view class='p'>
-        {{born_place}} / {{birthday}} / {{constellation}}
+        {{born_place}} 
+        <block wx:if="{{birthday}}"> / {{birthday}}</block>
+        <block wx:if="{{constellation}}"> / {{constellation}} </block>
         </view>
 
-        <view class="summary">
+        <view class="summary" wx:if="{{summary}}">
             <view class="l-title">简介</view>
             <view class="summary-inner">{{summary}}</view>
         </view>

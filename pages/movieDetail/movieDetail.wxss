@@ -147,4 +147,11 @@
 }
 .loading-true{
     text-indent: -9999em;
+    min-height: 100vh;
+}
+.loading-true .share{
+    display: none;
+}
+.share-btn{
+    font-size: 28rpx;
 }

@@ -41,7 +41,6 @@
             </block>
         </view>
 
-
         <view class="wish">{{wish_count}}人想看，{{collect_count}}人看过</view>
 
         <view class="summary">
@@ -76,6 +75,10 @@
                 <view class="star allstar{{item.rating.value+'0'}}"></view>
                 <view class="inner">{{item.content}}</view>
             </view>
+        </view>
+
+        <view class='share'>
+            <button class='share-btn' open-type="share">分享电影给好友</button>
         </view>
 
     </view>
