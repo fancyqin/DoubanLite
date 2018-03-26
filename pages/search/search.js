@@ -7,7 +7,9 @@ Page({
      */
     data: {
         searchData:[],
-        searchLoading: false
+        searchLoading: false,
+        showHistroy: true,
+        historyList:[]
     },
     timer: null,
     searchMovie:function(e){
@@ -17,32 +19,53 @@ Page({
             searchData:[],
             searchLoading: true
         })
-        this.timer = setTimeout(function () {   
+        this.timer = setTimeout(function () {
+            var q = e.detail.value;   
             wx.request({
                 url: app.globalData.url + '/v2/movie/search',
                 data: {
                     apikey: app.globalData.apikey,
-                    q: e.detail.value
+                    q: q
                 },
                 header: {
                     "Content-Type": "application/text"
                 },
                 dataType: 'json',
                 success: function (res) {
+                    let his;
+                    if (q && _this.data.historyList.indexOf(q) === -1){
+                        _this.data.historyList.push(q);
+                        wx.setStorage({
+                            key: 'historyList',
+                            data: _this.data.historyList
+                        });
+                    }
                     _this.setData({
                         searchData: res.data.subjects,
-                        searchLoading: false
+                        searchLoading: false,
+                        showHistroy: false,
+                        historyList: _this.data.historyList
                     })
                 }
             })
         }, 1000);
     },
-
+    searchMovieByTap:function(){
+        //todo
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        var _this = this;
+        wx.getStorage({
+            key: "historyList",
+            success: function (res) {
+                _this.setData({
+                    historyList: res.data
+                })
+            }
+        })
     },
 
     /**

@@ -8,7 +8,15 @@
 
 <view class='search-list loading-{{searchLoading}}'>
 
-
+    <view class="his" wx:if="{{showHistroy && historyList.length >0 }}">
+        <view class="his-title">历史搜索</view>
+        <view class="his-list">
+            <view class="his-item" wx:for="{{historyList}}" bindtap='searchMovieByTap' >
+                {{item}}
+            </view>
+        </view>
+        
+    </view>
 
     <block wx:if="{{searchData.length > 0}}">
 
@@ -21,7 +29,7 @@
     </block>
 
 
-    <view wx:else class='no-result'>
+    <view wx:if="{{!showHistroy && searchData.length === 0}}" class='no-result'>
          木有鱼丸
     </view>
 
