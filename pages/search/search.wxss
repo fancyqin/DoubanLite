@@ -96,3 +96,9 @@ page{
     padding: 5rpx 15rpx;
     border-radius: 3px;
 }
+.clear-his{
+    text-align: center;
+    color: #888;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}

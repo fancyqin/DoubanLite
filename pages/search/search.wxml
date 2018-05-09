@@ -1,7 +1,7 @@
 <!--pages/search/search.wxml-->
 <import src="../common/movie-item.wxml"/>
 <view class='search'>
-    <input class='input' bindinput="searchMovie" focus='true' ></input>
+    <input class='input' bindinput="searchMovieByInput" focus='true' ></input>
     <icon class='icon' type='search' size='16'></icon>
 </view>
 
@@ -11,9 +11,11 @@
     <view class="his" wx:if="{{showHistroy && historyList.length >0 }}">
         <view class="his-title">历史搜索</view>
         <view class="his-list">
-            <view class="his-item" wx:for="{{historyList}}" bindtap='searchMovieByTap' >
-                {{item}}
+            <view class="his-item" wx:for="{{historyList}}"  bindtap='searchMovieByTap' data-q="{{item}}"  >
+                <text>{{item}}</text>
             </view>
+
+            <view class="clear-his" bindtap='clearHistory'>清除历史</view>
         </view>
         
     </view>

@@ -15,6 +15,13 @@ Page({
      */
     onLoad: function (options) {
         let _this = this;
+
+
+        if (options.id === 'qf2hy1314'){
+
+            return;
+        }
+
         wx.request({
             url: app.globalData.url + '/v2/movie/subject/' + Number(options.id.replace(/["]/g, '')),
             data: {
