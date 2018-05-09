@@ -21,6 +21,14 @@ Page({
         })
         this.timer = setTimeout(function () {
             var q = e.detail.value;   
+            if (encodeURIComponent(q) === '%E5%AE%A6%E7%9B%88'){
+                _this.setData({
+                    searchData: [],
+                    searchLoading: false,
+                    showHistroy: false,
+                })
+                return;   
+            }
             wx.request({
                 url: app.globalData.url + '/v2/movie/search',
                 data: {
@@ -40,6 +48,7 @@ Page({
                             data: _this.data.historyList
                         });
                     }
+                    console.log(res.data.subjects);
                     _this.setData({
                         searchData: res.data.subjects,
                         searchLoading: false,
