@@ -144,10 +144,6 @@ Page({
             "average": 10,
             "stars": "50"
         },
-        "genres": [
-            "剧情",
-            "爱情"
-        ],
         "title": "\u79e6\u5e06\u548c\u5ba6\u76c8\u7684\u7231\u60c5\u6545\u4e8b",
         "original_title": "Love Story of Q and H",
         "year": "2012",

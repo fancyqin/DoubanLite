@@ -1,7 +1,7 @@
 <!--pages/movieList/movieList.wxml-->
 <import src="../common/movie-item.wxml"/>
 <view class='list'>
-    <view class="list-box" wx:for-items="{{list}}" wx:key='{{index}}'>
+    <view class="list-box" wx:for="{{list}}" wx:key='{{index}}'>
         <template wx:if="{{page === 'weekly'}}" is="movieItem" data="{{...item.subject}}"/>
         <template wx:else is="movieItem" data="{{...item}}"/>
     </view>
