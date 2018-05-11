@@ -128,9 +128,9 @@ Page({
         ],
         "collect_count": 520,
         "images": {
-            "small": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2517753454.jpg",
-            "large": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2517753454.jpg",
-            "medium": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2517753454.jpg"
+            "small": "http://p8jly0wx2.bkt.clouddn.com/love.jpg",
+            "large": "http://p8jly0wx2.bkt.clouddn.com/love.jpg",
+            "medium": "http://p8jly0wx2.bkt.clouddn.com/love.jpg"
         },
         "douban_site": "",
         "year": "2016",
@@ -138,27 +138,7 @@ Page({
             {
                 "rating": {
                     "max": 5,
-                    "value": 0,
-                    "min": 0
-                },
-                "useful_count": 173,
-                "author": {
-                    "uid": "aquqmarine",
-                    "avatar": "https://img1.doubanio.com/icon/u3439511-8.jpg",
-                    "signature": "Let's cross over.",
-                    "alt": "https://www.douban.com/people/aquqmarine/",
-                    "id": "3439511",
-                    "name": "Chloé "
-                },
-                "subject_id": "24773958",
-                "content": "下一部：《复仇者联盟：逆转未来》",
-                "created_at": "2018-04-26 04:37:55",
-                "id": "1364086114"
-            },
-            {
-                "rating": {
-                    "max": 5,
-                    "value": 4,
+                    "value": 5,
                     "min": 0
                 },
                 "useful_count": 299,
@@ -198,7 +178,7 @@ Page({
             {
                 "rating": {
                     "max": 5,
-                    "value": 3,
+                    "value": 5,
                     "min": 0
                 },
                 "useful_count": 554,
@@ -208,11 +188,11 @@ Page({
                     "signature": "",
                     "alt": "https://www.douban.com/people/cn_panda/",
                     "id": "2561289",
-                    "name": "摩诃曼珠沙华"
+                    "name": "宝石"
                 },
                 "subject_id": "24773958",
-                "content": "景甜出场的那一瞬间真的太震撼了，打趴下灭霸的时候全场都起立鼓掌了，美队把自己的盾牌给了景甜希望她能做下一任美国队长，景甜拒绝了并且亮出了胸口的红旗说i am Chinese! 电影院里掌声久久不息…",
-                "created_at": "2018-04-27 16:50:29",
+                "content": "祝你们春梦了无痕！",
+                "created_at": "2016-11-27 19:50:29",
                 "id": "1364732206"
             }
         ],
@@ -269,47 +249,25 @@ Page({
         "casts": [
             {
                 "avatars": {
-                    "small": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p56339.jpg",
-                    "large": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p56339.jpg",
-                    "medium": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p56339.jpg"
+                    "small": "http://p8jly0wx2.bkt.clouddn.com/qf.jpg",
+                    "large": "http://p8jly0wx2.bkt.clouddn.com/qf.jpg",
+                    "medium": "http://p8jly0wx2.bkt.clouddn.com/qf.jpg"
                 },
-                "name_en": "Robert Downey Jr.",
-                "name": "小罗伯特·唐尼",
+                "name_en": "Qin Fan",
+                "name": "\u79e6\u5e06",
                 "alt": "https://movie.douban.com/celebrity/1016681/",
                 "id": "1016681"
             },
             {
                 "avatars": {
-                    "small": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p4053.jpg",
-                    "large": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p4053.jpg",
-                    "medium": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p4053.jpg"
+                    "small": "http://p8jly0wx2.bkt.clouddn.com/hy.jpg",
+                    "large": "http://p8jly0wx2.bkt.clouddn.com/hy.jpg",
+                    "medium": "http://p8jly0wx2.bkt.clouddn.com/hy.jpg"
                 },
-                "name_en": "Chris Hemsworth",
-                "name": "克里斯·海姆斯沃斯",
+                "name_en": "Huan Ying",
+                "name": "\u5ba6\u76c8",
                 "alt": "https://movie.douban.com/celebrity/1021959/",
                 "id": "1021959"
-            },
-            {
-                "avatars": {
-                    "small": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1359877729.49.jpg",
-                    "large": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1359877729.49.jpg",
-                    "medium": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1359877729.49.jpg"
-                },
-                "name_en": "Chris Evans",
-                "name": "克里斯·埃文斯",
-                "alt": "https://movie.douban.com/celebrity/1017885/",
-                "id": "1017885"
-            },
-            {
-                "avatars": {
-                    "small": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p15885.jpg",
-                    "large": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p15885.jpg",
-                    "medium": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p15885.jpg"
-                },
-                "name_en": "Mark Ruffalo",
-                "name": "马克·鲁弗洛",
-                "alt": "https://movie.douban.com/celebrity/1040505/",
-                "id": "1040505"
             }
         ],
         "countries": [
@@ -322,25 +280,25 @@ Page({
         "directors": [
             {
                 "avatars": {
-                    "small": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p51466.jpg",
-                    "large": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p51466.jpg",
-                    "medium": "https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p51466.jpg"
+                    "small": "http://p8jly0wx2.bkt.clouddn.com/qf.jpg",
+                    "large": "http://p8jly0wx2.bkt.clouddn.com/qf.jpg",
+                    "medium": "http://p8jly0wx2.bkt.clouddn.com/qf.jpg"
                 },
-                "name_en": "Anthony Russo",
-                "name": "安东尼·罗素",
-                "alt": "https://movie.douban.com/celebrity/1321812/",
-                "id": "1321812"
+                "name_en": "Qin Fan",
+                "name": "\u79e6\u5e06",
+                "alt": "https://movie.douban.com/celebrity/1016681/",
+                "id": "1016681"
             },
             {
                 "avatars": {
-                    "small": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1525505053.79.jpg",
-                    "large": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1525505053.79.jpg",
-                    "medium": "https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1525505053.79.jpg"
+                    "small": "http://p8jly0wx2.bkt.clouddn.com/hy.jpg",
+                    "large": "http://p8jly0wx2.bkt.clouddn.com/hy.jpg",
+                    "medium": "http://p8jly0wx2.bkt.clouddn.com/hy.jpg"
                 },
-                "name_en": "Joe Russo",
-                "name": "乔·罗素",
-                "alt": "https://movie.douban.com/celebrity/1320870/",
-                "id": "1320870"
+                "name_en": "Huan Ying",
+                "name": "\u5ba6\u76c8",
+                "alt": "https://movie.douban.com/celebrity/1021959/",
+                "id": "1021959"
             }
         ],
         "comments_count": 9371,
