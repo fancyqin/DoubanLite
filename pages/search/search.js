@@ -144,13 +144,13 @@ Page({
             "average": 10,
             "stars": "50"
         },
-        "title": "\u79e6\u5e06\u548c\u5ba6\u76c8\u7684\u7231\u60c5\u6545\u4e8b",
+        "title": "\u79e6\u5e06\u548c\u5ba6\u76c8",
         "original_title": "Love Story of Q and H",
         "year": "2012",
         "images": {
-            "small": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1566292031.jpg",
-            "large": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1566292031.jpg",
-            "medium": "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1566292031.jpg"
+            "small": "http://p8jly0wx2.bkt.clouddn.com/love.jpg",
+            "large": "http://p8jly0wx2.bkt.clouddn.com/love.jpg",
+            "medium": "http://p8jly0wx2.bkt.clouddn.com/love.jpg"
         },
         "id": "qf2hy1314"
     }
